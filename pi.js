@@ -8,12 +8,12 @@
  	* @param {int} limit - How many digits to calculate pi to.
  	*/
 	var pi = function(limit){
-		if(!limit || limit > piLimit){
-			console.error('Please use a limit ')
+		if(!limit || limit > piLimit || limit < 0){
+			console.error('Please use a limit that is greater than 0 and less than ' + limit, limit)
 			return;
 		}
 
-		return (16 * Math.atan(1 / 5) - 4 * Math.atan(1 / 239)).toFixed(limit);
+		console.log(16 * Math.atan(1 / 5) - 4 * Math.atan(1 / 239).toFixed(limit));
 	}
 
 	if(process.argv.length < 3){
@@ -23,5 +23,5 @@
 
 	var commandLineLimit = process.argv[2];
 
-	console.log(pi(process.argv[2]));	
+	pi(process.argv[2]);	
 })();
