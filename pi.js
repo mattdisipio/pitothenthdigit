@@ -9,7 +9,7 @@
  	*/
 	var pi = function(limit){
 		if(!limit || limit > piLimit || limit < 0){
-			console.error('Please use a limit that is greater than 0 and less than ' + limit, limit)
+			console.error('Please use a limit that is greater than 0 and less than ' + piLimit + '. Provided limit: ', limit)
 			return;
 		}
 
